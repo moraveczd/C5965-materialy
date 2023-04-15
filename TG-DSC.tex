@@ -1,0 +1,239 @@
+\documentclass[hyperref=unicode,presentation,10pt]{beamer}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{caption}
+
+%dělení slov
+\usepackage{ragged2e}
+\let\raggedright=\RaggedRight
+%konec dělení slov
+
+\addtobeamertemplate{frametitle}{
+	\let\insertframetitle\insertsectionhead}{}
+\addtobeamertemplate{frametitle}{
+	\let\insertframesubtitle\insertsubsectionhead}{}
+
+\makeatletter
+\CheckCommand*\beamer@checkframetitle{\@ifnextchar\bgroup\beamer@inlineframetitle{}}
+\renewcommand*\beamer@checkframetitle{\global\let\beamer@frametitle\relax\@ifnextchar\bgroup\beamer@inlineframetitle{}}
+\makeatother
+\setbeamercolor{section in toc}{fg=red}
+\setbeamertemplate{section in toc shaded}[default][100]
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+
+\def\uv#1{„#1“}
+
+\mode<presentation>{\usetheme{default}}
+\usecolortheme{crane}
+
+\setbeamertemplate{footline}[frame number]
+
+\title[Crisis]
+{Termická analýza}
+
+\author
+{Zdeněk Moravec}
+\date[KPT 2004]
+{hugo@chemi.muni.cz}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Termická analýza}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+	\item Soubor metod sledujících chování vzorku během definovaného teplotního programu
+	\item TG - termogravimetrie - sledujeme změny hmotnosti vzorku
+	\item DTA - diferenční termická analýza - sledujeme rozdíl teplot mezi vzorkem a referencí během teplotního programu
+	\item DSC - diferenční skenovací kalorimetrie - měříme tepelný tok mezi vzorkem a referencí
+	\item STA - simultánní termická analýza
+	\item TMA - Termomechanická analýza - sledujeme deformace zatíženého vzorku během teplotního programu
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Termogravimetrie}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+	\item Měříme změny hmotnosti vzorku při jeho plynulém ohřevu nebo ochlazování
+	\item Změny hmotnosti se vyjadřují jako závislost na teplotě nebo čase analýzy
+	\item  Během ohřevu může docházet k poklesu hmotnosti vzorku, z~důvodu uvolňování plynu, např. vody nebo oxidu uhličitého
+	\item Může také docházet ke zvyšování hmotnosti vzorku reakcí s~atmosférou - oxidace vzorku
+	\item TG křivky podávají informace o složení zkoumaného vzorku, jeho tepelné stálosti, teplotním rozkladu a také o produktech vznikajících při rozkladu
+	\item TG křivka ve svém průběhu obsahuje úseky vodorovné s osou x, tzv. prodlevy, a~zlomy.
+	\begin{itemize}
+		\item Prodlevy jsou úseky, kdy ještě nedošlo k žádné změně hmotnosti vzorku.
+		\item Zlomy naopak naznačují, že se analyzovaný vzorek začíná rozkládat (mění svoji hmotnost).
+	\end{itemize}
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\adjincludegraphics[width=13cm,valign=l]{img/tg-skalice.png}
+	\vfill
+}
+
+\subsection{DTA}
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+	\vfill
+	\begin{itemize}
+	\item Diferenční Termická Analýza
+	\item Předchůdce DSC, jednodušší instrumentace
+	\item Umožňuje měřit tepelné změny vzorku během analýzy
+	\item Měříme rozdíl teploty kelímku se vzorkem a referenčního kelímku
+	\end{itemize}
+	\vfill
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\adjincludegraphics[width=\textwidth]{img/DTA.jpg}
+		\end{column}
+	\end{columns}
+}
+
+\subsection{DSC}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+	\item \textit{DSC s kompenzací příkonu} - podstatou DSC s kompenzací příkonu je zachování nulového teplotního rozdílu mezi měřeným a srovnávacím vzorkem. Tato varianta DSC je charakterizována dvěma oddělenými měřícími celami a dvěma tepelnými zdroji a měříme tedy elektrický příkon, který je potřebný k udržení konstantní teploty obou vzorků.
+	\item \textit{DSC s tepelným tokem} - druhou variantou je metoda DSC s tepelným tokem. Měření rozdílu příkonu je nahrazeno měřením rozdílu teplot vzorku a srovnávacího vzorku, které jsou umístěny ve společné peci a jsou spojeny tepelným mostem. Se znalostí tepelného odporu mezi pecí a vzorkem a referencí lze považovat tepelný tok od vzorku nebo ke vzorku za úměrný rozdílu teplot. Teplota vzorku je měřena termočlánkem, který je v kontaktu se vzorkem.
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\adjincludegraphics[height=\textheight]{img/STA449C-drzak2.jpg}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\adjincludegraphics[width=12.5cm,valign=l]{img/dsc-skalice.png}
+	\vfill
+}
+
+\subsection{STA}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+	\item Simultánní metody (STA) – umožňují zkoumat více fyzikálních vlastností během jednoho měření. Výhodou tohoto přístupu je, že nemusíme připravovat nové vzorky a máme tak dány stejné experimentální podmínky. Na druhou stranu ale tyto podmínky musí vyhovovat všem použitým metodám.
+	\item Mezi nejvíce rozšířenou dvojici metod patří TG-DTA a~TG-DSC. Tyto metody se totiž dobře doplňují.
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\adjincludegraphics[width=12.5cm,valign=l]{img/tg-dsc-skalice.png}
+	\vfill
+}
+
+\subsection{Instrumentace}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{figure}
+		\adjincludegraphics[height=.75\textheight]{img/STA449C.jpg}
+		\caption*{STA 449C Jupiter.}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{figure}
+		\adjincludegraphics[height=.5\textheight]{img/DTA-\_und\_DSC-Tiegel.jpg}
+		\caption*{Kelímky pro TG a DSC. Zdroj: \href{https://commons.wikimedia.org/wiki/File:DTA-_und_DSC-Tiegel.jpg}{Bic/Commons}}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{figure}
+		\adjincludegraphics[width=.9\textwidth]{img/Autosampler-DSC.jpg}
+		\caption*{Autosampler pro TG/DSC. Zdroj: \href{https://commons.wikimedia.org/wiki/File:Autosampler-DSC.jpg}{Dr. Reiner Düren aka RedPiranha/Commons}}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Coupling TGA/IR}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+	\item Plyny vznikající během degradace vzorku vedeme do měřící cely a pomocí IR spektroskopie stanovíme jejich složení
+	\item Během transportu plynů z pece do měřící cely dochází k velkému zředění plynu, proto je nutné používat citlivější detektory (MCT)
+	\end{itemize}
+	\adjincludegraphics[width=10cm,valign=l]{img/tg-irFoto.jpg}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\adjincludegraphics[width=11cm,valign=l]{img/tg-ir.png}
+	\vfill
+}
+
+\subsection{Praktické využití termické analýzy}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+	\item Studium degradačních procesů - polymery, organické a anorganické materiály
+	\item Charakterizace polymerů - skelný přechod
+	\item Farmacie a potravinářství - studium lyofilizačních a krystalizačních procesů
+	\item Materiálová chemie kovů - konstrukce fázových diagramů slitin
+	\item Geologie - identifikace přírodních materiálů
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Analýza keramických materiálů}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{columns}
+	\begin{column}{0.5\textwidth}
+	\adjincludegraphics[width=7cm]{img/TG-pottery.png}
+	\end{column}
+
+	\begin{column}{0.5\textwidth}
+	\adjincludegraphics[width=5cm]{img/TG-pottery-DSC.png}
+	\end{column}
+
+	\end{columns}
+	\vfill
+	\footnotetext[1]{TSENG, YUNG-KUAN a BI-YAN XU. AN ANALYSIS OF THE GEM-BLUE GLAZE OF YE WANG'S KOJI POTTERY*. Archaeometry [online]. 2012, 54(4), 643-663 [cit. 2019-11-22]. DOI: 10.1111/j.1475-4754.2011.00646.x.}
+}
+
+\end{document}
