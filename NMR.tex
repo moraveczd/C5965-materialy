@@ -14,9 +14,9 @@
 %konec dělení slov
 
 \addtobeamertemplate{frametitle}{
-	\let\insertframetitle\insertsectionhead}{}
+	\let\insertframetitle\insertsubtitle}{}
 \addtobeamertemplate{frametitle}{
-	\let\insertframesubtitle\insertsubsectionhead}{}
+	\let\insertframesubtitle\insertsectionhead}{}
 
 \makeatletter
 \CheckCommand*\beamer@checkframetitle{\@ifnextchar\bgroup\beamer@inlineframetitle{}}
@@ -55,8 +55,7 @@
 \begin{document}
 \frame{\titlepage}
 
-\section{Nukleární Magnetická Rezonance}
-\subsection{Stručná historie}
+\section{Stručná historie}
 \frame{
 	\frametitle{}
 	\vfill
@@ -73,7 +72,7 @@
 	\vfill
 }
 
-\subsection{Princip}
+\section{Princip}
 \frame{
 	\frametitle{}
 	\vfill
@@ -86,7 +85,7 @@
 	\vfill
 }
 
-\subsection{Jaderný spin}
+\section{Jaderný spin}
 \frame{
 	\frametitle{}
 	\vfill
@@ -113,7 +112,7 @@
 	\vfill
 }
 
-\subsection{Radiofrekvenční pulsy}
+\section{Radiofrekvenční pulsy}
 \frame{
 	\frametitle{}
 	\vfill
@@ -130,7 +129,7 @@
 	\vfill
 }
 
-\subsection{Chemický posun}
+\section{Chemický posun}
 \frame{
 	\frametitle{}
 	\vfill
@@ -160,7 +159,7 @@
 	\vfill
 }
 
-\subsection{Interakční konstanta}
+\section{Interakční konstanta}
 \frame{
 	\frametitle{}
 	\vfill
@@ -200,13 +199,24 @@
 	\item Velikost interakce se vyjadřuje pomocí interakční konstanty, která se označuje písmenem \textit{J}. Pro přesnější popis interakce se využívá
 indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-H) vyjádříme $^3J_{HH}$. Její velikost se udává v Hz.
 	\end{itemize}
-	\begin{center}
+	\begin{figure}
 	\includegraphics[keepaspectratio,width=10cm]{img/couplingconstant.png}
-	\end{center}
+	\end{figure}
 	\vfill
 }
 
-\subsection{Decoupling (dekaplink)}
+\frame{
+	\frametitle{}
+	\vfill
+
+	\begin{figure}
+		\includegraphics[height=.75\textheight]{img/1H-ethylbenzen-300.png}
+		\caption*{$^1$H NMR ethylbenzenu}
+	\end{figure}
+	\vfill
+}
+
+\section{Decoupling (dekaplink)}
 \frame{
 	\frametitle{}
 	\begin{columns}
@@ -225,7 +235,27 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\end{columns}
 }
 
-\subsection{Schéma NMR spektrometru}
+\frame{
+	\frametitle{}
+	\vfill	
+	\begin{figure}
+		\includegraphics[height=.75\textheight]{img/13C-ethylbenzen-300.png}
+		\caption*{$^{13}$C NMR s $^1$H decouplerem ethylbenzenu}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill	
+	\begin{figure}
+		\includegraphics[height=.75\textheight]{img/Ethylbenzene-13C-nodec-NMR.png}
+		\caption*{$^{13}$C NMR bez $^1$H decoupleru ethylbenzenu}
+	\end{figure}
+	\vfill
+}
+
+\section{Schéma NMR spektrometru}
 \frame{
 	\frametitle{}
 	\vfill
@@ -233,7 +263,7 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\vfill
 }
 
-\subsection{NMR magnety}
+\section{NMR magnety}
 \frame{
 	\frametitle{}
 	\vfill
@@ -270,26 +300,30 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\vfill
 }
 
-\subsection{Závislost rezonanční frekvence na síle magnetického pole}
+\section{Závislost rezonanční frekvence na síle magnetického pole}
 \frame{
 	\frametitle{}
-	\begin{tabular}{|l|l|l|}
-	\hline
-	$B_0$ [T] & $^1H$ [MHz] & $^{13}C$ [MHz] \\\hline
-	1,41 & 60 & 15,1 \\\hline
-	2,35 & 100 & 25,15 \\\hline
-	7,05 & 300 & 75,4 \\\hline
-	11,74 & 500 & 125,7 \\\hline
-	14,09 & 600 & 150,9 \\\hline
-	16,44 & 700 & 176,05 \\\hline
-	19,97 & 850 & 213,78 \\\hline
-	22,32 & 950 & 238,94 \\\hline
-	29,76 & 1200 & 318,59 \\\hline
-	\end{tabular}
-	\includegraphics[keepaspectratio,width=5cm]{img/JEOL_NMR-Magnets_Family.jpg}
+	\begin{center}
+		\begin{tabular}{|r@{,}l|l|r@{,}l|}
+		\hline
+		\multicolumn{2}{|c|}{\ce{B_0} [T]} & \ce{^1H} [MHz] & \multicolumn{2}{|c|}{\ce{^{13}C} [MHz]} \\\hline
+		1 & 41 & 60 & 15 & 1 \\\hline
+		2 & 35 & 100 & 25 & 15 \\\hline
+		7 & 05 & 300 & 75 & 4 \\\hline
+		11 & 74 & 500 & 125 & 7 \\\hline
+		14 & 09 & 600 & 150 & 9 \\\hline
+		16 & 44 & 700 & 176 & 05 \\\hline
+		19 & 97 & 850 & 213 & 78 \\\hline
+		22 & 32 & 950 & 238 & 94 \\\hline
+		28 & 20 & 1200 & 318 & 59 \\\hline
+		\end{tabular}
+	\end{center}
+	\begin{figure}
+		\includegraphics[width=.5\textwidth]{img/JEOL_NMR-Magnets_Family.jpg}
+	\end{figure}
 }
 
-\subsection{NMR sondy}
+\section{NMR sondy}
 \frame{
 	\frametitle{}
 	\vfill
@@ -336,7 +370,7 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\vfill
 }
 
-\subsection{Vzorky pro NMR spektroskopii}
+\section{Vzorky pro NMR spektroskopii}
 \frame{
 	\frametitle{}
 	\vfill
@@ -357,7 +391,7 @@ rozpouštědlem.
 	\vfill
 }
 
-\subsection{2D NMR}
+\section{2D NMR}
 \frame{
 	\frametitle{}
 	\vfill
@@ -373,7 +407,7 @@ rozpouštědlem.
 	\vfill
 }
 
-\subsection{NMR v pevné fázi}
+\section{NMR v pevné fázi}
 \frame{
 	\frametitle{}
 	\vfill
@@ -391,7 +425,7 @@ rozpouštědlem.
 }
 
 
-\subsection{NMR ve slabém magnetickém poli}
+\section{NMR ve slabém magnetickém poli}
 \frame{
 	\frametitle{}
 	\vfill
@@ -412,7 +446,7 @@ rozpouštědlem.
 	\vfill
 }
 
-\subsection{Využití NMR}
+\section{Využití NMR}
 \frame{
 	\frametitle{}
 	\vfill
@@ -431,7 +465,7 @@ rozpouštědlem.
 	\vfill
 }
 
-\subsection{Literatura}
+\section{Literatura}
 \frame{
 	\frametitle{}
 	\vfill
