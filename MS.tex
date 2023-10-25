@@ -55,6 +55,19 @@
 \begin{document}
 \frame{\titlepage}
 
+\section{Princip}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Separační metoda.
+		\item Principem hmotnostní spektrometrie je ionizace vzorku a analýza vzniklých iontů na základě jejich chování v magnetickém poli.
+		\item Hmotnostní spektrum nejčastěji zobrazuje závislost intenzity signálu na poměru hmoty iontu a jeho náboje (\emph{m/z}).
+	\end{itemize}
+	\includegraphics[width=7cm]{img/acetone_ms.png}
+	\vfill
+}
+
 \section{Stručná historie}
 \frame{
 	\frametitle{}
@@ -64,7 +77,9 @@
 	\item \textbf{1934} MS využita v organické chemii. R. Conrad
 	\item \textbf{1940} Elektronová ionizace. C. Berry
 	\item \textbf{1948} Publikován návrh nového analyzátoru typu TOF (Time Of Flight). A.E. Cameron, D.F. Eggers
+	\item \textbf{1953} První kvadrupolární analyzátor, W. Paul a H. Steinwedel
 	\item \textbf{1956} První spojení GC/MS. F.W. McLafferty, R.S. Gohlke
+	\item \textbf{1966} Objev chemické ionizace. F. H. Field a M. S. B. Munson
 	\item \textbf{1974} První spojení HPLC/MS. P.J. Arpino, M.A. Baldwin, F.W. McLafferty
 	\item \textbf{1988} První použití ionizace elektrosprejem. J. Fenn
 	\item \textbf{1999} Nový typ analyzátoru - Orbitrap. A.A. Makarov
@@ -88,19 +103,6 @@
 	\end{itemize}
 	\item Základní pík - pík s nejvyšší intenzitou ve spektru.
 	\end{itemize}
-	\vfill
-}
-
-\subsection{Princip}
-\frame{
-	\frametitle{}
-	\vfill
-	\begin{itemize}
-	\item Separační metoda.
-	\item Principem hmotnostní spektrometrie je ionizace vzorku a analýza vzniklých iontů na základě jejich chování v magnetickém poli.
-	\item Hmotnostní spektrum nejčastěji zobrazuje závislost intenzity signálu na poměru hmoty iontu a jeho náboje (\emph{m/z}).
-	\end{itemize}
-	\includegraphics[width=7cm]{img/acetone_ms.png}
 	\vfill
 }
 
@@ -183,7 +185,7 @@
 	\frametitle{}
 	\vfill
 	\begin{itemize}
-	\item Analyzátor je součást MS spektrometru, kde dochází k separaci iontů podle poměru m/z.
+	\item \textit{Analyzátor} je součást MS spektrometru, kde dochází k separaci iontů podle poměru m/z.
 	\item \emph{Kvadrupól} - nejběžnější a nejlevnější typ analyzátoru.
 	\begin{itemize}
 	\item Kombinace čtyř tyčí, na které je přivedeno stejnosměrné i~střídavé napětí. Úpravou velikosti stejnosměrného napětí a~amplitudy střídavého lze zvolit ionty s určitým poměrem m/z a~umožnit jim doputovat k detektoru, zatímco ostatní ionty jsou vychýleny mimo detektor.\footnote[frame]{Fulvio314, \href{https://commons.wikimedia.org/wiki/File:Mass\_spectrometer\_quadrupole.JPG}{Mass spectrometer quadrupole.JPG}}
@@ -219,6 +221,26 @@
 \frame{
 	\frametitle{}
 	\vfill
+	\begin{figure}
+		\includegraphics[height=.65\textheight]{img/TOF-Reflektor.png}
+		\caption*{Schéma TOF analyzátoru s iontovým zrcadlem.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:TOF-Reflektor.svg}{Elisemarion/Commons}}}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{figure}
+		\includegraphics[height=.7\textheight]{img/ESI_TOF.jpg}
+		\caption*{ESI-TOF MS spektrometr. TOF analyzátor je umístěn v kolmém směru.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:ESI_TOF.jpg}{Kkmurray/Commons}}}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
 	\begin{itemize}
 	\item \emph{Orbitrap} - elektrostatická orbitální past.\footnote[frame]{Thermo Fisher Scientific (Bremen), \href{https://commons.wikimedia.org/wiki/File:OrbitrapMA\%26Injector.png}{OrbitrapMA\&Injector.png}}
 	\begin{itemize}
@@ -240,12 +262,31 @@
 	\frametitle{}
 	\vfill
 	\begin{itemize}
-	\item Detektory dělíme na dvě skupiny: i) ty, které zaznamenávají všechny ionty, bez ohledu na jejich m/z a ii) ty, které zaznamenávají ionty s ohledem na jejich m/z.
-	\item \emph{Elektronový násobič} - letící iont vyrazí elektron z dynody násobiče, vyražený elektron putuje na další dynody a vyráží další elektrony. Detekce probíhá měřením vzniklého proudu.\footnote[frame]{\href{http://www.sge.com/products/electron-multipliers/how-electron-multipliers-work}{How Electron Multipliers work}}$^,$\footnote[frame]{Egmason, \href{https://commons.wikimedia.org/wiki/File:Electron_multiplier.svg}{Electron multiplier.svg}}
+	\item Detektory dělíme na dvě skupiny:
+	\begin{itemize}
+		\item zaznamenávají všechny ionty, bez ohledu na jejich hodnotu m/z
+		\item zaznamenávají ionty s ohledem na jejich hodnotu m/z
 	\end{itemize}
-	\begin{center}
-	\includegraphics[height=3.8cm]{img/Electron_multiplier.png}
-	\end{center}
+	\end{itemize}
+
+	\begin{figure}
+		\includegraphics[height=.5\textheight]{img/Cont_dynode_detector.jpg}
+		\caption*{Elektronový násobič.\footnote[frame]{Zdroj:  \href{https://commons.wikimedia.org/wiki/File:Cont_dynode_detector.jpg}{Kkmurray/Commons}}}
+	\end{figure}
+	\vfill
+}
+
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item \emph{Elektronový násobič} - letící iont vyrazí elektron z dynody násobiče, vyražený elektron putuje na další dynody a vyráží další elektrony. Detekce probíhá měřením vzniklého proudu.\footnote[frame]{\href{http://www.sge.com/products/electron-multipliers/how-electron-multipliers-work}{How Electron Multipliers work}}
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[height=3.8cm]{img/Electron_multiplier.png}
+		\caption*{Princip funkce elektronového násobiče.\footnote[frame]{Zdroj:  \href{https://commons.wikimedia.org/wiki/File:Electron_multiplier.svg}{Egmason/Commons}}}
+	\end{figure}
 	\vfill
 }
 
@@ -352,14 +393,14 @@
 \frame{
 	\frametitle{}
 	\vfill
-	Kombinace LC/MS.\footnote[frame]{LA NASA, Jacopo, Marco ZANABONI, Daniele ULDANCK, et al. Novel application of liquid chromatography/mass spectrometry for the characterization of drying oils in art: Elucidation on the composition of original paint materials used by Edvard Munch (1863–1944). Analytica Chimica Acta [online]. 2015, 896, 177-189 [cit. 2019-11-22]. DOI: 10.1016/j.aca.2015.09.023.}
+	Kombinace LC/MS.\footnote[frame]{LA NASA, Jacopo, Marco ZANABONI, Daniele ULDANCK, et al. Novel application of liquid chromatography/mass spectrometry for the characterization of drying oils in art. Analytica Chimica Acta [online]. 2015, 896, 177-189 [cit. 2019-11-22]. DOI: 10.1016/j.aca.2015.09.023.}
 	\begin{columns}
 	\begin{column}{0.5\textwidth}
-	\adjincludegraphics[width=4cm]{img/MS-Munch-paint.png}
+	\adjincludegraphics[width=3.6cm]{img/MS-Munch-paint.png}
 	\end{column}
 
 	\begin{column}{0.5\textwidth}
-	\adjincludegraphics[width=4.7cm]{img/MS-Munch-MS.png}
+	\adjincludegraphics[width=4.3cm]{img/MS-Munch-MS.png}
 	\end{column}
 
 	\end{columns}
