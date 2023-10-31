@@ -87,7 +87,10 @@
 \frame{
 	\frametitle{}
 	\vfill
-	\adjincludegraphics[width=13cm,valign=l]{img/tg-skalice.png}
+	\begin{figure}
+		\adjincludegraphics[height=.7\textheight]{img/tg-skalice.png}
+		\caption*{TG křivka modré skalice.}
+	\end{figure}
 	\vfill
 }
 
@@ -106,7 +109,10 @@
 	\vfill
 		\end{column}
 		\begin{column}{0.5\textwidth}
-			\adjincludegraphics[width=\textwidth]{img/DTA.jpg}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/DTA.jpg}
+				\caption*{DTA držák s korundovými kelímky.}
+			\end{figure}
 		\end{column}
 	\end{columns}
 }
@@ -125,14 +131,20 @@
 \frame{
 	\frametitle{}
 	\vfill
-	\adjincludegraphics[height=\textheight]{img/STA449C-drzak2.jpg}
+	\begin{figure}
+		\adjincludegraphics[height=.7\textheight]{img/STA449C-drzak2.jpg}
+		\caption*{DSC držák s Pt/Rh kelímky.}
+	\end{figure}
 	\vfill
 }
 
 \frame{
 	\frametitle{}
 	\vfill
-	\adjincludegraphics[width=12.5cm,valign=l]{img/dsc-skalice.png}
+	\begin{figure}
+		\adjincludegraphics[height=.65\textheight]{img/dsc-skalice.png}
+		\caption*{DSC křivka modré skalice.}
+	\end{figure}
 	\vfill
 }
 
@@ -150,9 +162,27 @@
 \frame{
 	\frametitle{}
 	\vfill
-	\adjincludegraphics[width=12.5cm,valign=l]{img/tg-dsc-skalice.png}
+	\begin{figure}
+		\adjincludegraphics[height=.65\textheight]{img/tg-dsc-skalice.png}
+		\caption*{STA modré skalice.}
+	\end{figure}
 	\vfill
 }
+
+\subsection{TMA a dilatometrie}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item \textbf{TMA} -- termomechanická analýza, technika používaná ke stanovení rozměrových změn vzorku v závislosti na teplotě, jako je teplota měknutí, teplota skelného přechodu a koeficient lineární teplotní roztažnosti.
+		\item \textbf{Dilatometrie} -- měření závislosti rozměrů vzorku na teplotě během definovaného teplotního programu.
+		\item \textbf{Tepelná expanze} -- u většiny materiálů dochází ke změně rozměrů během ohřevu nebo chlazení. Během ohřevu se rozměry zpravidla zvětšují a během ochlazování zmenšují.
+		\item Změnu rozměrů můžeme popsat pomocí součinitele teplotní délkové roztažnosti, \ce{$\alpha$}.
+		\item $l\ =\ l_0(1+\alpha\Delta t)$
+	\end{itemize}
+	\vfill
+}
+
 
 \subsection{Instrumentace}
 \frame{
@@ -170,7 +200,7 @@
 	\vfill
 	\begin{figure}
 		\adjincludegraphics[height=.5\textheight]{img/DTA-\_und\_DSC-Tiegel.jpg}
-		\caption*{Kelímky pro TG a DSC. Zdroj: \href{https://commons.wikimedia.org/wiki/File:DTA-_und_DSC-Tiegel.jpg}{Bic/Commons}}
+		\caption*{Kelímky pro TG a DSC.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:DTA-_und_DSC-Tiegel.jpg}{Bic/Commons}}}
 	\end{figure}
 	\vfill
 }
@@ -180,7 +210,7 @@
 	\vfill
 	\begin{figure}
 		\adjincludegraphics[width=.9\textwidth]{img/Autosampler-DSC.jpg}
-		\caption*{Autosampler pro TG/DSC. Zdroj: \href{https://commons.wikimedia.org/wiki/File:Autosampler-DSC.jpg}{Dr. Reiner Düren aka RedPiranha/Commons}}
+		\caption*{Autosampler pro TG/DSC.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Autosampler-DSC.jpg}{Dr. Reiner Düren aka RedPiranha/Commons}}}
 	\end{figure}
 	\vfill
 }
@@ -193,14 +223,20 @@
 	\item Plyny vznikající během degradace vzorku vedeme do měřící cely a pomocí IR spektroskopie stanovíme jejich složení
 	\item Během transportu plynů z pece do měřící cely dochází k velkému zředění plynu, proto je nutné používat citlivější detektory (MCT)
 	\end{itemize}
-	\adjincludegraphics[width=10cm,valign=l]{img/tg-irFoto.jpg}
+	\begin{figure}
+		\adjincludegraphics[height=.5\textheight]{img/tg-irFoto.jpg}
+		\caption*{Coupling TG/IR. Netzsch STA 449C Jupiter-Bruker Tensor 27}
+	\end{figure}
 	\vfill
 }
 
 \frame{
 	\frametitle{}
 	\vfill
-	\adjincludegraphics[width=11cm,valign=l]{img/tg-ir.png}
+	\begin{figure}
+		\adjincludegraphics[height=.75\textheight]{img/tg-ir.png}
+		\caption*{Výstup z TG/IR.}
+	\end{figure}
 	\vfill
 }
 
@@ -224,16 +260,16 @@
 	\vfill
 	\begin{columns}
 	\begin{column}{0.5\textwidth}
-	\adjincludegraphics[width=7cm]{img/TG-pottery.png}
+	\adjincludegraphics[height=.6\textheight]{img/TG-pottery.png}
 	\end{column}
 
 	\begin{column}{0.5\textwidth}
-	\adjincludegraphics[width=5cm]{img/TG-pottery-DSC.png}
+	\adjincludegraphics[height=.6\textheight]{img/TG-pottery-DSC.png}
 	\end{column}
 
 	\end{columns}
 	\vfill
-	\footnotetext[1]{TSENG, YUNG-KUAN a BI-YAN XU. AN ANALYSIS OF THE GEM-BLUE GLAZE OF YE WANG'S KOJI POTTERY*. Archaeometry [online]. 2012, 54(4), 643-663 [cit. 2019-11-22]. DOI: 10.1111/j.1475-4754.2011.00646.x.}
+	Termická analýza jako metoda pro identifikaci keramických materiálů.\footnote[frame]{TSENG, YUNG-KUAN a BI-YAN XU. AN ANALYSIS OF THE GEM-BLUE GLAZE OF YE WANG'S KOJI POTTERY. Archaeometry [online]. 2012, 54(4), 643-663 [cit. 2019-11-22]. DOI: 10.1111/j.1475-4754.2011.00646.x.}
 }
 
 \end{document}
