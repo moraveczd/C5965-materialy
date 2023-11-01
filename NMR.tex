@@ -48,12 +48,36 @@
 
 \subtitle{Nukleární Magnetická Rezonance}
 \author
-{\includegraphics[keepaspectratio,width=5cm]{img/apt-spectra.jpg}\\
+{\includegraphics[keepaspectratio,height=.5\textheight]{img/1H-ethylbenzen-300.png}\\
 	Zdeněk Moravec, hugo@chemi.muni.cz}
 \date{}
 
 \begin{document}
 \frame{\titlepage}
+
+\section{Princip}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{columns}
+		\begin{column}{.6\textwidth}
+			\begin{itemize}
+				\item NMR -- Nukleární Magnetická Rezonance
+				\item Sledujeme absorpci radiofrekvenčního záření vzorkem, který je umístěn v silném magnetickém poli.
+				\item Vzorek je nejčastěji kapalný, ale lze měřit i pevné látky a plyny.
+				\item Jde o důležitou metodu v chemické a strukturní analýze.
+				\item Vyžaduje silné magnetické pole, proto se nejčastěji využívá supravodivých magnetů.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.45\textwidth}
+			\begin{figure}
+				\includegraphics[width=.9\textwidth]{img/Bruker_500_Ultrashield_Plus.jpg}
+				\caption*{NMR spektrometr 500 MHz.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Bruker_500_Ultrashield_Plus.jpg}{Steff-X/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\vfill
+}
 
 \section{Stručná historie}
 \frame{
@@ -68,19 +92,6 @@
 	\item \textbf{1991} Nobelova cena za HR-NMR, vývoj nových pulsních technik, rozvoj FT-NMR a zavedení 2D NMR technik - Richard R. Ernst.
 	\item \textbf{2002} Nobelova cena za vývoj NMR technik umožňujících určení 3D struktury biomolekul - Kurt Wütthrich.
 	\item \textbf{2003} Nobelova cena za vývoj MRI - Paul C. Lauterbur.
-	\end{itemize}
-	\vfill
-}
-
-\section{Princip}
-\frame{
-	\frametitle{}
-	\vfill
-	\begin{itemize}
-	\item Sledujeme absorpci radiofrekvenčního záření vzorkem, který je umístěn v magnetickém poli.
-	\item Vzorek je nejčastěji kapalný, ale lze měřit i pevné látky a plyny.
-	\item Jde o důležitou metodu v chemické a strukturní analýze.
-	\item Vyžaduje silné magnetické pole, proto se nejčastěji využívá supravodivých magnetů.
 	\end{itemize}
 	\vfill
 }
@@ -106,9 +117,9 @@
 \frame{
 	\frametitle{}
 	\vfill
-	\begin{center}
-	\includegraphics[keepaspectratio,width=7cm]{img/NMR-levels.png}
-	\end{center}
+	\begin{figure}
+		\includegraphics[height=.7\textheight]{img/NMR-levels.png}
+	\end{figure}
 	\vfill
 }
 
@@ -123,9 +134,6 @@
 	\item Délka pulsů se pohybuje v řádu $\mu$s.
 	\item Čím je puls delší, tím je větší i sklápěcí úhel.
 	\end{itemize}
-	\begin{center}
-	\includegraphics[keepaspectratio,width=5cm]{img/NMR-pulse.png}
-	\end{center}
 	\vfill
 }
 
@@ -167,9 +175,10 @@
 	\item Pokud je v molekule více NMR aktivních jader, může docházet k jejich vzájemné interakci. Síla této interakce je dána hlavně počtem vazeb, které jádra oddělují.
 	\item Velikost interakční konstanty je nezávislá na intenzitě magnetického pole.
 	\end{itemize}
-	\begin{center}
-	\includegraphics[keepaspectratio,width=9cm]{img/couplingconstant.png}
-	\end{center}
+	\begin{figure}
+		\includegraphics[height=.4\textheight]{img/NMR_J-coupling_trees.svg.png}
+		\caption*{Příklad štěpení NMR signálu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:NMR_J-coupling_trees.svg}{Keministi/Commons}}}
+	\end{figure}
 	\vfill
 }
 
@@ -197,10 +206,11 @@
 	\vfill
 	\begin{itemize}
 	\item Velikost interakce se vyjadřuje pomocí interakční konstanty, která se označuje písmenem \textit{J}. Pro přesnější popis interakce se využívá
-indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-H) vyjádříme $^3J_{HH}$. Její velikost se udává v Hz.
+indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-H) vyjádříme $^3J_{\textrm{HH}}$. Její velikost se udává v Hz.
 	\end{itemize}
 	\begin{figure}
-	\includegraphics[keepaspectratio,width=10cm]{img/couplingconstant.png}
+		\includegraphics[height=.4\textheight]{img/NMR_J-coupling_trees.svg.png}
+		\caption*{Příklad štěpení NMR signálu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:NMR_J-coupling_trees.svg}{Keministi/Commons}}}
 	\end{figure}
 	\vfill
 }
@@ -219,38 +229,33 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 \section{Decoupling (dekaplink)}
 \frame{
 	\frametitle{}
-	\begin{columns}
-	\begin{column}{0.75\textwidth}
 	\begin{itemize}
-	\item Štěpením signálů spektra je důležitou informací pro strukturní analýzu, zároveň ale zhoršuje poměr signál/šum.
-	\item Pro potlačení štěpení se používá tzv. decoupling, kdy kontinuálně ozařujeme dekaplovaná jádra. Tím dojde k potlačení štěpení.
-	\item Ztratíme ale informaci o kvantitativním složení vzorku, protože intenzita signálu v dekaplovaném spektru není úměrná koncentraci.
-	\item Gated decoupling – neozařujeme během akvizice, nedojde k potlačení NOE.
-	\item Inverse-gated decoupling – ozařujeme pouze během akvizice, vhodné pro jádra se záporným gyromagnetickým poměrem – $^{15}$N, $^{29}$Si.
+		\item Štěpením signálů spektra je důležitou informací pro strukturní analýzu, zároveň ale zhoršuje poměr signál/šum.
+		\item Pro potlačení štěpení se používá tzv. decoupling, kdy kontinuálně ozařujeme dekaplovaná jádra. Tím dojde k potlačení štěpení.
+		\item Ztratíme ale informaci o kvantitativním složení vzorku, protože intenzita signálu v dekaplovaném spektru není úměrná koncentraci.
 	\end{itemize}
-	\end{column}
-	\begin{column}{0.3\textwidth}
-	\includegraphics[keepaspectratio,width=3.5cm]{img/decoupling.jpg}
-	\end{column}
-	\end{columns}
+	\begin{figure}
+		\includegraphics[width=.45\textwidth]{img/APT_basic_pulse_sequence.png}
+		\caption*{APT pulsní sekvence, využívá $^1$H decoupling.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:APT_basic_pulse_sequence.svg}{Thypingvinen/Commons}}}
+	\end{figure}
 }
 
 \frame{
 	\frametitle{}
-	\vfill	
+	\vfill
 	\begin{figure}
 		\includegraphics[height=.75\textheight]{img/13C-ethylbenzen-300.png}
-		\caption*{$^{13}$C NMR s $^1$H decouplerem ethylbenzenu}
+		\caption*{$^{13}$C NMR ethylbenzenu s $^1$H decouplingem}
 	\end{figure}
 	\vfill
 }
 
 \frame{
 	\frametitle{}
-	\vfill	
+	\vfill
 	\begin{figure}
 		\includegraphics[height=.75\textheight]{img/Ethylbenzene-13C-nodec-NMR.png}
-		\caption*{$^{13}$C NMR bez $^1$H decoupleru ethylbenzenu}
+		\caption*{$^{13}$C NMR ethylbenzenu bez $^1$H decouplingu}
 	\end{figure}
 	\vfill
 }
@@ -270,7 +275,10 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\begin{itemize}
 	\item Permanentní - do 100 MHz
 	\end{itemize}
-	\includegraphics[keepaspectratio,width=10cm]{img/NMR-Magritek.png}
+	\begin{figure}
+		\includegraphics[height=.6\textheight]{img/NMR-Magritek.jpg}
+		\caption*{Benchtop NMR.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Magritek_60_MHz_benchtop_NMR.jpg}{Johannes Schneider/Commons}}}
+	\end{figure}
 	\vfill
 }
 
@@ -280,7 +288,10 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\begin{itemize}
 	\item Cryogen-free - 100-300 MHz - levný provoz
 	\end{itemize}
-	\includegraphics[keepaspectratio,width=5cm]{img/200mhz cryogenfree.jpg}
+	\begin{figure}
+		\includegraphics[height=.6\textheight]{img/MR_Solutions_cryogen-free_PET-MRI_system.jpg}
+		\caption*{Cryogen-free MRI magnet.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:MR_Solutions\%27_cryogen-free_PET-MRI_system.jpg}{MR Solutions/Commons}}}
+	\end{figure}
 	\vfill
 }
 
@@ -294,9 +305,10 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\item Magnetické pole až 23,5 T (1000 MHz)
 	\end{itemize}
 	\end{itemize}
-	\begin{center}
-	\includegraphics[keepaspectratio,width=5cm]{img/Varian-_900MHz_-_21.2_Tesla.jpg}
-	\end{center}
+	\begin{figure}
+		\includegraphics[height=.5\textheight]{img/Varian-_900MHz_-_21.2_Tesla.jpg}
+		\caption*{NMR spektrometr 900 MHz.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:HWB-NMR_-_900MHz_-_21.2_Tesla.jpg}{MartinSaunders/Commons}}}
+	\end{figure}
 	\vfill
 }
 
@@ -318,9 +330,6 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 		28 & 20 & 1200 & 318 & 59 \\\hline
 		\end{tabular}
 	\end{center}
-	\begin{figure}
-		\includegraphics[width=.5\textwidth]{img/JEOL_NMR-Magnets_Family.jpg}
-	\end{figure}
 }
 
 \section{NMR sondy}
@@ -340,9 +349,6 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 	\item Nanosondy
 	\end{itemize}
 	\end{itemize}
-	\begin{textblock*}{4cm}(7cm,5cm)
-	\includegraphics[keepaspectratio,width=4cm]{img/NMR-probe-scheme.png}
-	\end{textblock*}
 	\vfill
 }
 
@@ -364,9 +370,20 @@ indexů, např. interakci mezi atomy vodíku v~ethanolu (přes tři vazby H-C-C-
 \frame{
 	\frametitle{}
 	\vfill
-	\begin{center}
-	\includegraphics[keepaspectratio,width=10cm]{img/NMR-probes.png}
-	\end{center}
+	\begin{columns}
+		\begin{column}{.4\textwidth}
+			\begin{figure}
+				\includegraphics[width=.6\textheight,angle=270]{img/200MHz-Probehead.jpg}
+				\caption*{NMR sonda.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:19F_200MHz_Probehead.jpg}{Steff-X/Commons}}}
+			\end{figure}
+		\end{column}
+		\begin{column}{.6\textwidth}
+			\begin{figure}
+				\includegraphics[width=\textwidth]{img/NMR_magnet_Julich_Germany.jpg}
+				\caption*{NMR spektrometr 1.2 GHz s kryosondou.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:1.2_GHz_NMR_magnet_Julich_Germany.jpg}{Adville/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
 	\vfill
 }
 
@@ -385,7 +402,10 @@ rozpouštědlem.
 	\end{itemize}
 	\end{column}
 	\begin{column}{0.3\textwidth}
-	\includegraphics[keepaspectratio,width=3cm]{img/NMR-tubes.jpg}
+		\begin{figure}
+			\includegraphics[height=.67\textheight]{img/NMR-tubes.jpg}
+			\caption*{Skleněné NMR kyvety.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:NMR_tubes.jpg}{Edgar181/Commons}}}
+		\end{figure}
 	\end{column}
 	\end{columns}
 	\vfill
@@ -401,9 +421,10 @@ rozpouštědlem.
 	\item Lepší cestou je přechod na NMR experimenty ve dvou a více dimenzích.
 	\item V dnešní době se rutinně využívá 2D a 3D NMR.
 	\end{itemize}
-	\begin{center}
-	\includegraphics[keepaspectratio,height=5cm]{img/NMR-2D-3D.png}
-	\end{center}
+	\begin{figure}
+		\includegraphics[height=.45\textheight]{img/Noesy.jpg}
+		\caption*{NOESY NMR spektrum kodeinu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Noesy.jpg}{Acorn NMR Inc./Commons}}}
+	\end{figure}
 	\vfill
 }
 
@@ -417,10 +438,20 @@ rozpouštědlem.
 	\item Rotace při rychlostech 0-130 kHz.
 	\item Pro měření málo citlivých jader se využívá cross-polarizace.
 	\end{itemize}
-	\begin{center}
-	\includegraphics[keepaspectratio,height=4cm]{img/NMR-MAS-angle.png}
-	\includegraphics[keepaspectratio,height=4cm]{img/NMR-MAS-rotors.jpg}
-	\end{center}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics[height=.4\textheight]{img/MagicAngleSpinning.png}
+				\caption*{Rotace pod magickým úhlem.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:MagicAngleSpinning.svg}{Dtrx/Commons}}}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics[height=.4\textheight]{img/MAS_rotors.jpg}
+				\caption*{Rotory pro MAS NMR.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:MAS_rotors.jpg}{Thomas Kress/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
 	\vfill
 }
 
@@ -439,10 +470,10 @@ rozpouštědlem.
 	\item Low-Field NMR.
 	\item Systémy využívající permanentní magnety nebo elektromagnety.
 	\end{itemize}
-	\begin{center}
-	\includegraphics[keepaspectratio,width=0.2\textwidth]{img/Geodynamo_Between_Reversals.png}
-	\includegraphics[keepaspectratio,width=0.5\textwidth]{img/HighFieldTAGComparison_cropped.png}
-	\end{center}
+	\begin{figure}
+		\includegraphics[height=0.37\textheight]{img/Earth_magnetic_field.png}
+		\caption*{Magnetické pole Země.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Earth\%27s_magnetic_field,_schematic.svg}{Zureks/Commons}}}
+	\end{figure}
 	\vfill
 }
 
@@ -457,11 +488,6 @@ rozpouštědlem.
 	\item Studium degradačních procesů a stupně degradace, např. barviv, polymerů, atd.
 	\item Studium stupně hydratace v nástěnných malbách pomocí bezkontaktní sondy.
 	\end{itemize}
-	\begin{center}
-		\includegraphics[keepaspectratio,width=0.3\textwidth]{img/H-NMR_1,2-dichlorobenzene.png}
-		\includegraphics[keepaspectratio,width=0.3\textwidth]{img/HSQC.png}
-		\includegraphics[keepaspectratio,width=0.3\textwidth]{img/Portable-NMR.jpg}
-	\end{center}
 	\vfill
 }
 
